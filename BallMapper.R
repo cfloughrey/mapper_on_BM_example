@@ -3,7 +3,7 @@
 # TO USE BEFORE graph_coloring.ipynb
 #####################################################
 
-setwd("~/Desktop/mapper_on_BM_example/")
+setwd("~/GitHub/mapper_on_BM_example/")
 
 library(data.table) # to read csv faster
 
@@ -28,7 +28,7 @@ BallMapperCpp <- function( points , values , epsilon )
 
 # load the dataset
 digits_X <- fread('data/digits_X.csv', sep=',', header = TRUE)
-digits_X_PCA <- fread('data/digits_X_PCA10.csv', sep=',', header = TRUE)
+digits_X_PCA <- fread('data/digits_X_PCA3.csv', sep=',', header = TRUE)
 
 sapply(digits_X[, 1:10], class)
 
@@ -61,7 +61,7 @@ ColorIgraphPlot(BM, seed=42)
 ############################
 # BM with PCA data
 # create a bm of radius epsilon, and color by the signature 
-epsilon <- 35
+epsilon <- 20
 
 print("COMPUTING BM")
 start <- Sys.time()
